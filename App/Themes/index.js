@@ -1,4 +1,5 @@
-import Images from './Images'
-import Profiles from './Profiles'
+import Images from "./Images";
+import Profiles from "./Profiles";
+import GlobalStyles from "./GlobalStyles";
 
-export { Images, Profiles }
+export { Images, Profiles, GlobalStyles };

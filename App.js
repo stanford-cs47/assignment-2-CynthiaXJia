@@ -21,13 +21,26 @@ export default class App extends React.Component {
   constructor() {
     super();
 
-    var haroldProfile = Profiles.harold;
+    var profile = Profiles.harold;
     this.state = {
-      profileImage: haroldProfile.image,
-      name: haroldProfile.name,
-      age: haroldProfile.age,
-      occupation: haroldProfile.occupation
+      profile: profile,
+      lastProfile: profile,
+      rewound: true
     };
+    this.nextProfile = this.nextProfile.bind(this);
+    this.prevProfile = this.prevProfile.bind(this);
+  }
+
+  nextProfile() {
+    this.setState({
+      lastProfile: this.state.profile,
+      profile: Profiles.random(),
+      rewound: false
+    });
+  }
+
+  prevProfile() {
+    this.setState({ profile: this.state.lastProfile, rewound: true });
   }
 
   render() {
@@ -35,12 +48,16 @@ export default class App extends React.Component {
       <SafeAreaView style={styles.base}>
         <NavBar />
         <ProfileCard
-          profileImage={this.state.profileImage}
-          name={this.state.name}
-          age={this.state.age}
-          occupation={this.state.occupation}
+          profileImage={this.state.profile.image}
+          name={this.state.profile.name}
+          age={this.state.profile.age}
+          occupation={this.state.profile.occupation}
         />
-        <ActionButtons />
+        <ActionButtons
+          next={this.nextProfile}
+          prev={this.prevProfile}
+          rewound={this.state.rewound}
+        />
       </SafeAreaView>
     );
   }
@@ -49,7 +66,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   base: {
     flex: 1,
-    backgroundColor: "#edf0f5",
+    backgroundColor: "#ebeef5",
     flexDirection: "column",
     justifyContent: "space-between",
     paddingTop: Platform.OS === "android" ? 25 : 0

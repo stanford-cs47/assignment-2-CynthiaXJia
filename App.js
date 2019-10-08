@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Button,
   StyleSheet,
@@ -9,13 +9,13 @@ import {
   SafeAreaView,
   Dimensions,
   Platform
-} from "react-native";
-import { Images, Profiles } from "./App/Themes";
-import NavBar from "./App/Components/NavBar";
-import ProfileCard from "./App/Components/ProfileCard";
-import ActionButtons from "./App/Components/ActionButtons";
+} from 'react-native';
+import { Images, Profiles } from './App/Themes';
+import NavBar from './App/Components/NavBar';
+import ProfileCard from './App/Components/ProfileCard';
+import ActionButtons from './App/Components/ActionButtons';
 
-const { height, width } = Dimensions.get("window");
+const { height, width } = Dimensions.get('window');
 
 export default class App extends React.Component {
   constructor() {
@@ -66,16 +66,16 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   base: {
     flex: 1,
-    backgroundColor: "#ebeef5",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    paddingTop: Platform.OS === "android" ? 25 : 0
+    backgroundColor: '#ebeef5',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingTop: Platform.OS === 'android' ? 25 : 0
   },
 
   container: {
     flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });

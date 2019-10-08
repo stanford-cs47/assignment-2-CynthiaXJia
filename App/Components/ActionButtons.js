@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Image,
   StyleSheet,
@@ -9,14 +9,14 @@ import {
   Text,
   ScrollView,
   TouchableWithoutFeedback
-} from "react-native";
-import { Images, GlobalStyles } from "../Themes";
+} from 'react-native';
+import { Images, GlobalStyles } from '../Themes';
 
-const screenWidth = Dimensions.get("window").width;
+const screenWidth = Dimensions.get('window').width;
 
 export default ActionButtons = props => {
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [modalText, setModalText] = React.useState("");
+  const [modalText, setModalText] = React.useState('');
   return (
     // is there a way to use map to make this cleaner?
     <View style={styles.container}>
@@ -38,7 +38,7 @@ export default ActionButtons = props => {
       <TouchableOpacity
         style={[
           styles.button,
-          { backgroundColor: props.rewound ? "#fafafa" : "white" }
+          { backgroundColor: props.rewound ? '#fafafa' : 'white' }
         ]}
         onPress={props.prev}
         disabled={props.rewound}
@@ -47,7 +47,7 @@ export default ActionButtons = props => {
           source={Images.rewind}
           style={[
             styles.buttonIcon,
-            { tintColor: props.rewound ? "#ffe6a8" : null }
+            { tintColor: props.rewound ? '#ffe6a8' : null }
           ]}
         />
       </TouchableOpacity>
@@ -57,7 +57,7 @@ export default ActionButtons = props => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          setModalText("Boosted!");
+          setModalText('Boosted!');
           setModalOpen(true);
         }}
       >
@@ -69,7 +69,7 @@ export default ActionButtons = props => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          setModalText("Super Liked!");
+          setModalText('Super Liked!');
           setModalOpen(true);
         }}
       >
@@ -81,9 +81,9 @@ export default ActionButtons = props => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
     paddingRight: GlobalStyles.sidePadding,
     paddingLeft: GlobalStyles.sidePadding,
     height: 50,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   button: {
     height: 50,
     width: 50,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 100,
     padding: 10
   },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   bigButton: {
     height: 60,
     width: 60,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 120,
     padding: 12
   },
@@ -110,20 +110,20 @@ const styles = StyleSheet.create({
     flex: 1,
     height: undefined,
     width: undefined,
-    resizeMode: "contain"
+    resizeMode: 'contain'
   },
 
   modal: {
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "stretch"
+    justifyContent: 'center',
+    alignItems: 'stretch'
   },
 
   boostedText: {
     fontSize: 30,
-    color: "black",
-    textAlign: "center",
-    fontWeight: "bold"
+    color: 'black',
+    textAlign: 'center',
+    fontWeight: 'bold'
   }
 });

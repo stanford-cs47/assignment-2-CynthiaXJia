@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
-import { GlobalStyles } from "../Themes";
+import React from 'react';
+import { StyleSheet, View, Text, Image, Dimensions } from 'react-native';
+import { GlobalStyles } from '../Themes';
 
-const { height, width } = Dimensions.get("window");
+const { height, width } = Dimensions.get('window');
 
 export default ProfileCard = props => {
   const { profileImage, name, age, occupation } = props;
@@ -12,7 +12,7 @@ export default ProfileCard = props => {
         <Image source={profileImage} style={styles.profilePic} />
       </View>
       <View style={styles.cardLabel}>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: 'row' }}>
           <Text style={styles.titleBold}>{name}, </Text>
           <Text style={styles.title}>{age}</Text>
         </View>
@@ -24,15 +24,15 @@ export default ProfileCard = props => {
 
 const styles = StyleSheet.create({
   card: {
-    borderColor: "#C5C5C5",
-    backgroundColor: "white",
+    borderColor: '#C5C5C5',
+    backgroundColor: 'white',
     borderWidth: 1,
     marginLeft: GlobalStyles.sidePadding,
     marginRight: GlobalStyles.sidePadding,
     height: width - 2 * GlobalStyles.sidePadding + 65,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    justifyContent: "space-between"
+    justifyContent: 'space-between'
   },
 
   imageContainer: {
@@ -49,12 +49,12 @@ const styles = StyleSheet.create({
     fontSize: 24
   },
   titleBold: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 24
   },
   subtitle: {
     fontSize: 16,
-    color: "#C5C5C5"
+    color: '#C5C5C5'
   },
   cardLabel: {
     padding: 10

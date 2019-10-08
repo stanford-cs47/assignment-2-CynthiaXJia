@@ -1,5 +1,5 @@
-import React from "react";
-import { Images, GlobalStyles } from "../Themes";
+import React from 'react';
+import { Images, GlobalStyles } from '../Themes';
 import {
   View,
   TouchableOpacity,
@@ -7,7 +7,7 @@ import {
   Image,
   Dimensions,
   Platform
-} from "react-native";
+} from 'react-native';
 
 export default NavBar = () => {
   return (
@@ -25,13 +25,13 @@ export default NavBar = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: Platform.OS === "ios" ? 44 : 56,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    height: Platform.OS === 'ios' ? 44 : 56,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
 
     borderBottomWidth: 1,
-    borderBottomColor: "#C5C5C5",
+    borderBottomColor: '#C5C5C5',
 
     paddingLeft: GlobalStyles.sidePadding,
     paddingRight: GlobalStyles.sidePadding,
@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
   logo: {
     height: 35,
     width: 150,
-    resizeMode: "contain"
+    resizeMode: 'contain'
   },
 
   buttonImage: {
     height: 35,
     width: 35,
-    resizeMode: "contain",
-    tintColor: "#C5C5C5"
+    resizeMode: 'contain',
+    tintColor: '#C5C5C5'
   },
 
   button: {
